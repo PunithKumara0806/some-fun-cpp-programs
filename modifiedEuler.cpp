@@ -23,12 +23,12 @@ void Eulermodified(long long int a,long long int b){ // ax + by = z
             t = z2;
             z2 = z1%z2;
             z1 = t;
-            
-            if( z2 < 2){
-                if(z2 == 1)
-                    z1 = z2;
-                break;
-            }
+            // uncomment this block if some error 
+            // if( z2 < 2){ 
+            //     if(z2 == 1)
+            //         z1 = z2;
+            //     break;
+            // }
 
         }
     }
