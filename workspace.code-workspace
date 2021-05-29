@@ -1,0 +1,45 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"ostream": "cpp",
+			"iosfwd": "cpp",
+			"xstring": "cpp",
+			"cstring": "cpp"
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+		{
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"name": "Launch Extension",
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm",
+			"request": "launch",
+			"type": "pwa-extensionHost"
+		},
+			{
+				"name": "cl.exe - Build and debug active file",
+				"type": "cppvsdbg",
+				"request": "launch",
+				"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${fileDirname}",
+				"environment": [],
+				"console": "externalTerminal",
+				"preLaunchTask": "C/C++: cl.exe build active file"
+			}
+		]
+	}
+}
