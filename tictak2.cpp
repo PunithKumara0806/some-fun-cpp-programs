@@ -77,8 +77,11 @@ int main(){
         player = i*3 + j;
         insert(player , 'X');
         player_next = wincheck(i,j, 'X');
-
-        if(cpu_next != -1 && array[cpu_next] == '-' ){ 
+        cout<<player_next;
+        if(cpu_next != -1 ){
+            if(array[cpu_next] != '-' ){
+                cpu_next = player_next;
+            } 
  
             insert(cpu_next,'O');
             wincheck(0,cpu_next,'O');
@@ -93,11 +96,12 @@ int main(){
             if(array[0] == '-'){
                 m = 0; 
             }
-            else if(array[2] == '-'){
-                m = 2;
-            }
+            
             else if(array[4] == '-'){
                 m = 4;
+            }
+            else if(array[2] == '-'){
+                m = 2;
             }
             else if(array[6] == '-'){
                 m = 6;
